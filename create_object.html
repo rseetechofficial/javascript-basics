@@ -1,0 +1,38 @@
+<html>
+    <script>
+            var person = {
+
+                fname : "Ramesh",
+                lname : "Kumar",
+                age  : 22,
+                sal  : 350000,
+
+                getName : function(){
+
+                    return this.fname+" "+this.lname;
+                }        
+            }
+
+            console.log("Get full name " + person.getName);
+
+            var product = new Object();
+
+            console.log("Get name " + product.getName);
+
+            product.name = "Rakesh";
+            product.age = 23;
+
+            console.log("product details " , product);
+
+            var Company  = function(name, cost){
+                this.name = name;
+                this.cost = cost;
+            }
+            var obj = new Company ("Raju", 300);
+            var obj1 = new Company ("ronak", 400);
+
+            console.log(obj);
+            console.log(name);
+
+    </script>
+</html>

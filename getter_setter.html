@@ -1,0 +1,57 @@
+<html>
+
+    <script>
+    
+        var person = {
+
+            fname : "Rajat",
+            lname : "Madhu",
+            dob : 1993,
+            sal : 55000,
+
+            getFullName : function()
+            {
+                return this.fname + " " + this.lname;
+            },
+
+            getAge : function()
+            {
+                return 2018-this.dob;
+            }
+        }
+        console.log("Your age is ", person.getAge());
+        console.log("Full name is ", person.getFullName());
+
+        var person = {
+            fname: "ramesh",
+            lname : "Kumar",
+            dob:1994,
+
+            get getFullName(){
+                return this.fname + "--" + this.lname;
+            },
+
+            get getAge(){
+                return 2018-this.dob;
+            }
+        }
+
+        console.log("Getter age is ", person.getAge);
+        console.log("Getter full name is ", person.getFullName);
+
+        var mobile = { 
+            name : "Samsung new",
+
+            set cost(cost1){
+                this.ct = cost1;
+            },
+
+            get cost(){
+                return this.ct;
+            }
+        }
+        mobile.cost= 20003;
+
+        console.log("Get and set value is ", mobile.cost);
+    </script>
+</html>

@@ -1,0 +1,36 @@
+<html>
+    <script>
+        var person1 = {
+
+name : "Vinod",
+age : 22,
+sal : 34000
+}
+
+delete person1.age;
+
+console.log("New obj property ", person1);
+
+var obj = {
+
+    name : "vignesh",
+    age : 23
+}
+
+var newObject = Object.create(obj);
+
+newObject.height = 5.4;
+newObject.sal1 = 30000;
+
+delete newObject.age;
+
+console.log("Property of obj ", newObject);
+
+
+for(var x in newObject){
+    console.log("List of key ", x);
+}
+
+console.log("List of key ** ", Object.keys(newObject));
+    </script>
+</html>

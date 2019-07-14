@@ -1,0 +1,55 @@
+
+<html>
+    <script>
+    
+        
+        function add(){
+
+            console.log("The arguments length  is ", add.length);
+
+            var s = 0;
+
+            for(var i=0; i < arguments.length; i++)
+            {
+                console.log(s);
+                s= s+arguments[i];
+            }
+            console.log("Final sum is " +s);
+        }
+        add(4,5,7,2,1);
+
+        //console.log(" the function is string formets ", add.toString());
+
+        //============================================================
+
+        var obj = {
+            basic_salary : 25000
+        }
+
+        function grossSalary(da,hra){
+            return this.basic_salary+(da*this.basic_salary/100) + (hra*this.basic_salary/100);
+        }
+
+        var gross = grossSalary.call(obj,10,8);
+
+        console.log("Total gross salary ", gross);
+
+
+        function totalSalary(){
+            var tot = this.basic_salary;
+
+            for(var i=0; i < arguments.length; i++){
+
+                console.log("Total ", arguments[i], this.basic_salary);
+
+                tot = tot+arguments[i];
+            }
+            console.log("Total income " +tot);
+        }
+
+        totalSalary.apply(obj,[3000,2000,4000,6000]);
+
+        var ans = grossSalary.bind(obj,30,6);
+        console.log("final salary ", ans());
+    </script>
+</html>

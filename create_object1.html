@@ -1,0 +1,48 @@
+<html>
+    <script>
+    
+    var person = {
+
+        fname : "Ramesh",
+        lname : "kumar",
+        age : 22,
+        sal : 30000,
+
+        getFullname : function(){
+
+            return this.fname + " " + this .lname;
+        }
+    }
+
+    console.log(" Anonum function ", person.getFullname());
+
+    var bank = new Object();
+
+    bank.name = "Sbi new";
+    bank.emp = 5;
+    bank.branch = "Bangalore";
+
+    console.log(" New object ", bank);
+
+    var mobile =  function(name,cost,wt){
+        this.name = name;
+        this.cost = cost;
+        this.wt = wt;
+    }
+
+    var samsung = new mobile("Samsung new", 20000, 300);
+    var nokia = new mobile("Nokia 5200", 12000, 200);
+
+    console.log("mobile details ", samsung);
+
+    var food = {
+        name : "Dal",
+        cost : 200
+    }
+
+    console.log(food);
+
+    var offer = Object.create(food);
+    console.log("New obj of food ", offer);
+    </script>
+</html>

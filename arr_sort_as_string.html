@@ -1,0 +1,86 @@
+<html>
+    <script>
+            var arr = [3,4,8,5,1,9];
+
+            console.log("--> " ,arr);
+            arr.sort();
+            console.log("==>", arr)
+
+            var arr1 = ["Mohan", "Naresh", "Ramesh", "Amrit", "Rakesh", "Yogesh"];
+
+            console.log("Arr ", arr1);
+            arr1.sort();
+            console.log("Sort arr", arr1 );
+
+
+            function compare(a,b){
+
+                if(a<b){
+                    return -1;
+                }
+                if(a>b){
+                    return 1;
+                }
+                return 0;
+
+            }
+            arr.sort(compare);
+
+            console.log("=> Sort Array ", arr);
+
+            var arr2 = [3,4,8,5,1,9];
+            function compare(a1,b1){
+
+            if(a1>b1){
+                return -1;
+            }
+            if(a1<b1){
+                return 1;
+            }
+            return 0;
+
+            }
+            arr2.sort(compare);
+
+            console.log("=> Sort Array * ", arr2);
+
+            var emp = [
+
+                { name : "Ramesh", age : 25, sal : 20000 },
+                { name : "Yegesh", age : 29, sal : 20000 },
+                { name : "Amrit", age : 22, sal : 31000 },
+                { name : "Sakesh", age : 27, sal : 20000 },
+            ]
+
+            function empSort(a,b){
+
+                if(a.age < b.age){
+                    return 1;
+                }
+                if(a.age>b.age){
+                    return -1;
+                }
+                return 0;
+            }
+
+            emp.sort(empSort);
+            console.log("==> ", emp);
+
+            var name1 = ["ramesh","Ramesh","Yogesh", "yogesh", "amrit", "Amrit"];
+
+            function nameSort(a,b){
+
+                if(a.toLowerCase() < b.toLowerCase()){
+                    return -1;
+                }
+
+                if(a.toLowerCase() > b.toLowerCase()){
+                    return 1;
+                }
+
+                return 0;
+            }
+            name1.sort(nameSort);
+            console.log("----> ", name1);
+    </script>
+</html>

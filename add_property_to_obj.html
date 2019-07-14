@@ -1,0 +1,33 @@
+<html>
+    <script>
+    
+    var obj = {
+
+        name : "Ramesh",
+        age : 23
+    }
+
+    obj.dept ="IT";
+    obj.sal = 35000;
+
+    console.log("Add new property ", obj);
+
+    var person = {
+        name : "Rakesh",
+        sal : 45000,
+        dob : 1992
+    }
+
+    person.getAge = function(){
+        return 2018 - this.dob;
+    }
+
+    console.log("Your age is ", person.getAge());
+
+    console.log("Access obj property by dot", person.name);
+    console.log("Access obj property by type ", person['name']);
+
+
+
+    </script>
+</html>

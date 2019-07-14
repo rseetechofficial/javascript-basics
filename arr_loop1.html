@@ -1,0 +1,31 @@
+<html>
+    <script>
+    
+    var ob1 = {
+	basicsalary : 100000
+}
+ 
+function grossSalary(da,hra){
+	return this.basicsalary+(da*this.basicsalary/100)+(hra*this.basicsalary/100);
+}
+var gross=grossSalary.call(ob1,10,8)
+console.log('The gross salary is ',gross);
+ 
+//apply method : When we want to invoke a method in context of object, we use apply , if we pass array og argumnetys
+ 
+function totalIncome(){
+	var tot=this.basicsalary;
+	for(var i=0;i<arguments.length;i++){
+    	console.log("---> ",arguments[i],this.basicsalary)
+tot=tot+arguments[i];
+	}
+	console.log('Total income is '+tot);
+}
+totalIncome.apply(ob1,[4000,7000,10000,30000])
+ 
+var ans89=grossSalary.bind(ob1,10,8);//bind returns function
+console.log('Final ans is ',ans89())
+
+
+    </script>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<script>
+var arr1 = ["apple","cranberry"];
+var arr2 = ["banana","pineapple"];
+
+
+newArr = [...arr1,...arr2];
+
+console.log("New array is ", newArr);
+
+let arr3 = [1,88,77,2,34,23,3]; 
+let arr4 = [4,99,5]; 
+  
+arr = [...arr3,...arr4]; 
+console.log(arr);
+
+var arrSort = arr.sort(function(a,b){
+	return a-b;
+
+});
+console.log("Sorted array", arrSort );
+
+var x = 1;
+delete x;
+var output = (function() {
+  delete x;
+  return x;
+})();
+console.log(output);
+
+</script>
+</html>
